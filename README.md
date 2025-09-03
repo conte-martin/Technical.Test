@@ -12,7 +12,26 @@
 
 ## 📋 Tareas  
 
-### 1️⃣ Revisión de la Entidad `Product`  
+### 1️⃣ Revisión del CRUD `Category`  
+
+Como code reviewer, deberás analizar la implementación del CRUD de `Category` y documentar hallazgos y recomendaciones de mejora.  
+
+#### 📋 Tareas  
+- 🔍 **Identificar malas prácticas** en la implementación del CRUD (ejemplo: lógica duplicada, validaciones en el lugar incorrecto, acoplamientos innecesarios, etc.).  
+- 🧹 **Revisar la consistencia del código** (nombres de clases, métodos, parámetros y convenciones utilizadas).  
+- 🛡️ **Evaluar el manejo de errores y excepciones**, verificando si se devuelven respuestas claras y con códigos HTTP adecuados.  
+- 🧪 **Verificar la cobertura de validaciones** de entrada y salida (request/response).  
+- 🗄️ **Analizar la capa de acceso a datos**, asegurando que siga buenas prácticas y no exponga directamente entidades del dominio.  
+- 🧩 **Detectar violaciones a principios SOLID** o falta de separación de responsabilidades.  
+- 🚦 **Revisar el cumplimiento de RESTful API**, evaluando si los endpoints, verbos HTTP y respuestas son consistentes.  
+- 📑 **Proponer mejoras de diseño o patrones** que puedan aplicarse para mejorar mantenibilidad y escalabilidad (ejemplo: DTOs, Repository Pattern, CQRS, etc.).  
+- 🧭 **Revisar auditoría y trazabilidad**, confirmando si el CRUD considera campos como fechas de creación, borrado lógico o estados.  
+
+> ⚠️ **Nota:** No es necesario modificar el CRUD en este ejercicio, solo **comentar qué aspectos mejorarías y por qué**, documentando las observaciones como lo haría un code reviewer.  
+
+---
+
+### 2️⃣ Revisión de la Entidad `Product`  
 Analizar la clase `Product` (que se detalla más abajo) y aplicar las **oportunidades de mejora** en sus propiedades:  
 
 - 📝 Nombres que pueden generar ambigüedad.  
@@ -21,11 +40,9 @@ Analizar la clase `Product` (que se detalla más abajo) y aplicar las **oportuni
 - ⚖️ Uso de métricas físicas (`WeightKg`, `VolumeM3`).  
 - 📅 Propiedades relacionadas con auditoría (`CreatedAt`, `IsDeleted`) y estado (`Status`).  
 
-> ⚠️ **Nota:** No es necesario modificar los tipos de datos en este ejercicio, solo justificar qué aspectos mejorarías y por qué.  
-
 ---
 
-### 2️⃣ CRUD de Producto  
+### 3️⃣ CRUD de Producto  
 Implementar los endpoints necesarios para la gestión de productos:  
 
 - **Obligatorios:**  
@@ -39,13 +56,13 @@ Implementar los endpoints necesarios para la gestión de productos:
 
 ---
 
-### 3️⃣ Validación de Requests  
+### 4️⃣ Validación de Requests  
 - ✅ Validar los datos de entrada en los endpoints obligatorios y opcionales.  
 - 💬 Asegurar que los mensajes de error sean claros y consistentes.  
 
 ---
 
-### 4️⃣ Buenas Prácticas y Arquitectura  
+### 5️⃣ Buenas Prácticas y Arquitectura  
 - 🏗️ Seguir el enfoque de **arquitectura limpia** con separación por capas.  
 - 🧩 Aplicar principios **SOLID**.  
 - 🛠️ Usar patrones de diseño cuando aporten valor.  
@@ -53,7 +70,7 @@ Implementar los endpoints necesarios para la gestión de productos:
 
 ---
 
-### 5️⃣ Mejoras Técnicas  
+### 6️⃣ Mejoras Técnicas  
 - 🚀 Comentar brevemente las mejoras adicionales que consideres necesarias en la API para soportar la funcionalidad de producto.  
 
 ---
@@ -78,3 +95,4 @@ public class Product
     public bool? IsDeleted { get; set; }
     public int Status { get; set; }
 }
+```
