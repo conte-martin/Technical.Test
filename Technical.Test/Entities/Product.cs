@@ -1,6 +1,4 @@
-﻿using Technical.Test.Common.Enums;
-
-namespace Technical.Test.Entities
+﻿namespace Technical.Test.Entities
 {
     public class Product
     {
