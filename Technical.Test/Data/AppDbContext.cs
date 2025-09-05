@@ -16,6 +16,12 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(op
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.Entity<Category>(entity =>
+        {
+            entity.HasKey(e => e.Id);
+            entity.Property(e => e.Name);
+            entity.Property(e => e.Description);
+        });
         base.OnModelCreating(modelBuilder);
     }
 }
